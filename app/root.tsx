@@ -10,6 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -22,6 +23,17 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
   },
 ];
+
+
+
+// Syncfusion license registration
+import pkg from "@syncfusion/ej2-base"; 
+
+const { registerLicense } = pkg;
+
+registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
+
+// Syncfusion components will now work without any issues
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

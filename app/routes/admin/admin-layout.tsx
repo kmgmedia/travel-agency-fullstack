@@ -7,13 +7,14 @@ const { SidebarComponent } = pkg;
 const AdminLayout = () => {
   return (
     <div className="admin-layout">
-      MobileSidebar
       <aside className="w-full max-w-[270px] hidden lg:block">
-        <SidebarComponent width="270px" enableGestures={false}>
+        <SidebarComponent width={270} enableGestures={false}>
           <NavItems />
         </SidebarComponent>
       </aside>
-      <Outlet />
+      <aside className="children">
+        <Outlet />
+      </aside>
     </div>
   );
 };

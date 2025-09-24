@@ -10,7 +10,6 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
-
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -24,14 +23,13 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-
-
-// Syncfusion license registration
-import pkg from "@syncfusion/ej2-base"; 
-
-const { registerLicense } = pkg;
-
-registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
+// Syncfusion license registration - handled client-side to avoid SSR issues
+if (typeof window !== "undefined") {
+  import("@syncfusion/ej2-base").then((pkg) => {
+    const { registerLicense } = pkg;
+    registerLicense(import.meta.env.VITE_SYNCFUSION_LICENSE_KEY);
+  });
+}
 
 // Syncfusion components will now work without any issues
 

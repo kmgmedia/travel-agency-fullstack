@@ -150,8 +150,8 @@ export const RIGHT_CONFETTI = {
     totalUsers: 13610,
     usersJoined: { currentMonth: 330, lastMonth: 150 },
     totalTrips: 45300,
-    tripsCreated: { currentMonth: 500, lastMonth: 200 },
-    userRole: { total: 74, currentMonth: 30, lastMonth: 20 }
+    tripsCreated: { currentMonth: 195, lastMonth: 200 },
+    userRole: { total: 74, currentMonth: 70, lastMonth: 20 }
   };
   export const allTrips = [
     {
